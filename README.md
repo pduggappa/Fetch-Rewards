@@ -14,15 +14,16 @@ Ordering of the words do not matter.
 
 Algorithm:
 The actual algorithm is a replica of the Cosine Similarity algorithm. Here are the steps:
-    Get the 2 texts from the User.
-    Tokenize the texts - convert the text into a list of words. Here's where we expand the punctuations and substitute the digits with actual text.
-    Once the text is tokenized and we are left with a list of words for each text, we remove duplicates by converting it to a set.
-    We create an 'All Words' vector by taking the union of these 2 sets.This vector has words from both text 1 and text 2.
-    Now, we create 2 new lists that have 1 for every word in text 1 that is present in text 2. If not, we substitute it with 0.
-    For every word in both texts, we find the cosine similarity using the following formula :
-        similarity = similarity + word in text 1(1 or 0) x word in text 2 (1 or 0)
-        cosine_similarity = similarity / (sum of common words from text 1 in text 2 x sum of common words from text 2 in text 1) power of 0.5
-    This will give us a good idea if the 2 texts are similar or not.
+
+Get the 2 texts from the User.
+Tokenize the texts - convert the text into a list of words. Here's where we expand the punctuations and substitute the digits with actual text.
+Once the text is tokenized and we are left with a list of words for each text, we remove duplicates by converting it to a set.
+We create an 'All Words' vector by taking the union of these 2 sets.This vector has words from both text 1 and text 2.
+Now, we create 2 new lists that have 1 for every word in text 1 that is present in text 2. If not, we substitute it with 0.
+For every word in both texts, we find the cosine similarity using the following formula :
+similarity = similarity + word in text 1(1 or 0) x word in text 2 (1 or 0)
+cosine_similarity = similarity / (sum of common words from text 1 in text 2 x sum of common words from text 2 in text 1) power of 0.5
+This will give us a good idea if the 2 texts are similar or not.
 
 Source Code:
 This web app consists of the following files:
